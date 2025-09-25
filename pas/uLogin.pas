@@ -73,7 +73,9 @@ begin
 
   if ADOQueryLogin.FieldByName('Total').AsInteger > 0 then
   begin
-    Close;
+    FormPrincipal.NomeVendedor := Copy(cbbCodigo.Text, Pos(' - ', cbbCodigo.Text) + 3, Length(cbbCodigo.Text));
+//    Close;
+    ModalResult := mrOk;
   end
   else
     ShowMessage('Codigo ou senha inválidos.');

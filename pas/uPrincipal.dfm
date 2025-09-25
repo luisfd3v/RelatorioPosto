@@ -1,7 +1,7 @@
 object FormPrincipal: TFormPrincipal
   Left = 0
   Top = 0
-  Caption = 'Relat'#243'rio de Vendas - Vendedor'
+  Caption = 'Relat'#243'rio de Vendas'
   ClientHeight = 600
   ClientWidth = 800
   Color = clBtnFace
@@ -10,6 +10,7 @@ object FormPrincipal: TFormPrincipal
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  OnShow = FormShow
   TextHeight = 15
   object gbColaborador: TGroupBox
     Left = 8
@@ -30,7 +31,7 @@ object FormPrincipal: TFormPrincipal
       Font.Style = []
       ParentFont = False
     end
-    object lbl: TLabel
+    object lblDataInicio: TLabel
       Left = 16
       Top = 47
       Width = 64
@@ -43,7 +44,7 @@ object FormPrincipal: TFormPrincipal
       Font.Style = []
       ParentFont = False
     end
-    object Label3: TLabel
+    object lblDataFim: TLabel
       Left = 16
       Top = 76
       Width = 54
@@ -54,6 +55,19 @@ object FormPrincipal: TFormPrincipal
       Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
+      ParentFont = False
+    end
+    object lblColaboradorSelecionado: TLabel
+      Left = 184
+      Top = 12
+      Width = 86
+      Height = 20
+      Caption = 'Colaborador'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -15
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
       ParentFont = False
     end
     object dtpDataInicio: TDateTimePicker
@@ -88,6 +102,7 @@ object FormPrincipal: TFormPrincipal
       ParentFont = False
       TabOrder = 2
       StyleElements = [seFont, seBorder]
+      OnClick = btnTrocarColaboradorClick
     end
     object btnFiltrar: TButton
       Left = 560
