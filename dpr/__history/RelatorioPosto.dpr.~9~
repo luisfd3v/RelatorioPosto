@@ -1,0 +1,17 @@
+program RelatorioPosto;
+
+uses
+  Vcl.Forms,
+  uPrincipal in '..\pas\uPrincipal.pas' {Form1},
+  uLogin in '..\pas\uLogin.pas' {Form2},
+  uDataModule in '..\pas\uDataModule.pas' {DataModule1: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TDataModule1, DataModule1);
+  Application.CreateForm(TForm2, Form2);
+  Application.Run;
+end.
